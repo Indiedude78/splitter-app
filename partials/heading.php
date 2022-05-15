@@ -1,0 +1,1 @@
+<h1>Splitter App</h1>
