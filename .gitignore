@@ -1,1 +1,7 @@
 jquery/
+test*
+*.log
+*.txt
+config.php
+config.*
+*Examples*
