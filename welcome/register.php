@@ -100,7 +100,7 @@ if (isset($_POST["submit"])) {
         $r = $stmt->execute($params);
         // echo var_export($r, true);
         $e = $stmt->errorInfo();
-        echo var_export($e, true);
+        //echo var_export($e, true);
         if ($e[0] == "00000") {
             echo "Registration Successful";
         } else {
