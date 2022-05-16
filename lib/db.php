@@ -3,17 +3,17 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-function getDB(){
+function getDB()
+{
     global $db;
     if (!isset($db)) {
         try {
-            require_once(__DIR__. "/config.php");
+            require_once(__DIR__ . "/config.php");
 
-            $connection_string = "sqlsrv:Server=$dbhost;Database=$dbdatabase";
+            $connection_string = "mysql:host=$dbhost;dbname=$dbdatabase;charset=utf8mb4";
             $db = new PDO($connection_string, $dbuser, $dbpass);
             echo "Success";
-        }
-        catch (Exception $e) {
+        } catch (Exception $e) {
             var_export($e);
             $db = null;
             echo "Not Success";
@@ -21,5 +21,3 @@ function getDB(){
     }
     return $db;
 }
-
-?>
