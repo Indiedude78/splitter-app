@@ -95,13 +95,14 @@ if (isset($_POST["submit"])) {
             ":email" => $email,
             ":username" => $username,
             ":password" => $pass_hash,
-            ":is_active" => 0
+            ":is_active" => 1
         );
         $r = $stmt->execute($params);
         // echo var_export($r, true);
         $e = $stmt->errorInfo();
         if ($e[0] == "00000") {
             echo "Registration Successful\n";
+            echo "<h4>You can <a href=\"login.php\">login</a> now</h4>";
         } else {
             if ($e[0] == "23000") {
                 echo "Email or username already exists";
