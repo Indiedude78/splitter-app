@@ -1,5 +1,5 @@
 <?php
-include_once(__DIR__ . "\..\partials\heading.php");
+include_once(__DIR__ . "/../partials/heading.php");
 
 ?>
 
@@ -87,7 +87,7 @@ if (isset($_POST["submit"])) {
 
         $db = getDB();
         $query = "INSERT INTO Users(fname, lname, email, username, is_active, `password`) ";
-        $query .= "VALUES(:fname, :lname, :email, :username, :password, :is_active)";
+        $query .= "VALUES(:fname, :lname, :email, :username, :is_active, :password)";
         $stmt = $db->prepare($query);
         $params = array(
             ":fname" => $fname,
@@ -98,8 +98,9 @@ if (isset($_POST["submit"])) {
             ":is_active" => 0
         );
         $r = $stmt->execute($params);
-
+        // echo var_export($r, true);
         $e = $stmt->errorInfo();
+        echo var_export($e, true);
         if ($e[0] == "00000") {
             echo "Registration Successful";
         } else {
