@@ -100,9 +100,8 @@ if (isset($_POST["submit"])) {
         $r = $stmt->execute($params);
         // echo var_export($r, true);
         $e = $stmt->errorInfo();
-        //echo var_export($e, true);
         if ($e[0] == "00000") {
-            echo "Registration Successful";
+            echo "Registration Successful\n";
         } else {
             if ($e[0] == "23000") {
                 echo "Email or username already exists";
