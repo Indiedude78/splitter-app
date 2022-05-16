@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS `Users` (
     ,`username` VARCHAR(60) NOT NULL
     ,`created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
     ,`is_active` TINYINT(1)
+    ,`password` VARCHAR(60) NOT NULL
     ,PRIMARY KEY(`id`)
     ,UNIQUE (`email`)
     ,UNIQUE (`username`)
