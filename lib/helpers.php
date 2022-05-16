@@ -8,3 +8,27 @@ function generate_random_number($num_len)
     $rand_num = str_pad(rand(0, pow(10, $num_len) - 1), $num_len, '0', STR_PAD_LEFT); //Will allow leading 0
     return $rand_num;
 }
+function set_sess_var($sess_name, $db_var)
+{
+    $_SESSION[$sess_name] = $db_var;
+}
+
+function get_user_id()
+{
+    return $_SESSION["id"];
+}
+
+function get_user_fullname()
+{
+    return $_SESSION["fname"] . " " . $_SESSION["lname"];
+}
+
+function get_username()
+{
+    return $_SESSION["username"];
+}
+
+function get_email()
+{
+    return $_SESSION["email"];
+}
