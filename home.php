@@ -8,4 +8,7 @@ echo '<p>Welcome ' . get_user_fullname() . '</p>';
 ?>
 
 <button name="create_party" value="Create" onclick="parent.location='partials/create_party.php'">Create</button>
+<div>
+    <?php include_once(__DIR__ . "/partials/get_party.php"); ?>
+</div>
 <h4><a href="logout.php">logout</a></h4>
