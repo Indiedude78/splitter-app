@@ -37,6 +37,7 @@ include_once(__DIR__ . "/../partials/heading.php");
     <br>
     <input type="submit" id="submit" name="submit" value="Register" />
 </form>
+<h4>Already registered? <a href="login.php">Log in here</a></h4>
 
 <?php
 if (isset($_POST["submit"])) {

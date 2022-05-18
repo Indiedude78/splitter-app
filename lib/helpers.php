@@ -32,3 +32,12 @@ function get_email()
 {
     return $_SESSION["email"];
 }
+
+function is_logged_in()
+{
+    if (isset($_SESSION["id"]) && isset($_SESSION["username"]) && isset($_SESSION["email"])) {
+        return true;
+    } else {
+        return false;
+    }
+}

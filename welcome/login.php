@@ -12,7 +12,7 @@ require_once(__DIR__ . "/../partials/heading.php");
     <br>
     <input type="submit" id="submit" name="submit" value="Log In" />
 </form>
-
+<h4>Don't have an account? <a href="register.php">Register Here</a></h4>
 <?php
 if (isset($_POST["submit"])) {
     $user_email = null;
