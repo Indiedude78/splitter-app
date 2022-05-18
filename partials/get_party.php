@@ -17,9 +17,14 @@ if ($e[0] == "00000") {
 ?>
 <ul>
     <?php foreach ($result as $r) : ?>
-        <a href="view_party.php?id=<?php echo $r["id"]; ?>">
+        <a href="view_party.php?id=<?php echo $r["party_id"]; ?>">
             <div>
                 <li>
+                    <?php if ($r["is_creator"]) : ?>
+                        <span>
+                            <p>**</p>
+                        </span>
+                    <?php endif; ?>
                     <h3><?php echo $r["party_name"]; ?></h3>
                     <h5><?php echo $r["party_id"]; ?></h5>
                 </li>
