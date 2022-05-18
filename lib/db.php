@@ -12,11 +12,9 @@ function getDB()
 
             $connection_string = "mysql:host=$dbhost;dbname=$dbdatabase;charset=utf8mb4";
             $db = new PDO($connection_string, $dbuser, $dbpass);
-            echo "Success";
         } catch (Exception $e) {
             var_export($e);
             $db = null;
-            echo "Not Success";
         }
     }
     return $db;

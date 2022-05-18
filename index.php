@@ -10,9 +10,12 @@
 
 <body>
     <?php
-    include_once(__DIR__ . "\partials\heading.php");
+    include_once(__DIR__ . "/partials/heading.php");
+    if (is_logged_in()) {
+        header("Location:home.php");
+    }
     ?>
-    <h4><a href="welcome/register.php">Register Now</a></h4>
+    <h4><a href="welcome/register.php">Register Now</a> or <a href="welcome/login.php">Log In</a></h4>
 
 </body>
 
