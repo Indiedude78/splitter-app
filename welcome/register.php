@@ -35,7 +35,7 @@ include_once(__DIR__ . "/../partials/heading.php");
     <label for="pass2">Confirm Password</label>
     <input type="password" id="pass2" name="pass2" required />
     <br>
-    <input type="submit" id="submit" name="submit" value="Register" />
+    <input type="submit" id="r_submit" name="submit" value="Register" />
 </form>
 <h4>Already registered? <a href="login.php">Log in here</a></h4>
 

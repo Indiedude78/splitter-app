@@ -10,7 +10,7 @@ require_once(__DIR__ . "/../partials/heading.php");
     <label for="pass">Password</label>
     <input type="password" id="pass" name="pass" required />
     <br>
-    <input type="submit" id="submit" name="submit" value="Log In" />
+    <input type="submit" id="l_submit" name="submit" value="Log In" />
 </form>
 <h4>Don't have an account? <a href="register.php">Register Here</a></h4>
 <?php
