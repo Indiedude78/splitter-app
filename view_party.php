@@ -51,3 +51,4 @@ if (!isset($result["id"])) {
     <li><?php echo $r["username"]; ?></li>
 <?php endforeach; ?>
 </ul>
+<button onclick="window.location.href='home.php'" id="return_home_button">Return</button>
