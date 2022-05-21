@@ -51,4 +51,5 @@ if (!isset($result["id"])) {
     <li><?php echo $r["username"]; ?></li>
 <?php endforeach; ?>
 </ul>
+<?php include_once(__DIR__ . "/partials/add_expense.php"); ?>
 <button onclick="window.location.href='home.php'" id="return_home_button">Return</button>
