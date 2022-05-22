@@ -52,4 +52,5 @@ if (!isset($result["id"])) {
 <?php endforeach; ?>
 </ul>
 <?php include_once(__DIR__ . "/partials/add_expense.php"); ?>
+<?php include_once(__DIR__ . "/partials/list_expenses.php"); ?>
 <button onclick="window.location.href='home.php'" id="return_home_button">Return</button>

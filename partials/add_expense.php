@@ -36,7 +36,6 @@ if (isset($_POST["add"])) {
             }
             else {
                 echo "Error adding expense";
-            
             }
         }
     }
