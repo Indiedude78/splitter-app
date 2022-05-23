@@ -1,18 +1,18 @@
-<?php 
+<?php
 if (!is_logged_in()) {
     die();
 }
 ?>
-<form id="add_expense" class="form" method="POST">
+<form id="add_expense" class="form" method="POST" autocomplete="off">
     <label for="expense">Amount</label>
-    <input type="number" id="expense" name="expense" step="any" required/>
+    <input type="number" id="expense" name="expense" step="any" required />
     <br>
     <label for="expensef_for">For</label>
-    <input type="text" id="expense_for" name="for" required/>
+    <input type="text" id="expense_for" name="for" required />
     <br>
-    <input type="submit" name="add" id="e_submit" value="Add Expense"/>
+    <input type="submit" name="add" id="e_submit" value="Add Expense" />
 </form>
-<?php  
+<?php
 if (isset($_POST["add"])) {
     $expense = null;
     $for = null;
@@ -33,8 +33,7 @@ if (isset($_POST["add"])) {
             $e = $stmt->errorInfo();
             if ($e[0] == "00000") {
                 echo "Expense added!";
-            }
-            else {
+            } else {
                 echo "Error adding expense";
             }
         }

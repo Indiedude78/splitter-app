@@ -12,11 +12,18 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <dl>
-<?php if ($result && isset($result)): ?> 
-    <?php foreach ($result as $r): ?> 
-        <dt><?php echo $r["amount"]; ?></dt>
-        <dd><?php echo "--" . $r["for"]; ?></dd>
-        <dd><?php echo "added by: --- " . $r["fname"] . " " . mb_substr($r["lname"], 0, 1); ?></dd>
-    <?php endforeach; ?>
-<?php endif; ?>
+    <?php if ($result && isset($result)) : ?>
+        <?php foreach ($result as $r) : ?>
+            <dt><?php echo $r["amount"]; ?></dt>
+            <dd><?php echo "--" . $r["for"]; ?></dd>
+            <dd><?php echo "added by: --- " . $r["fname"] . " " . mb_substr($r["lname"], 0, 1); ?></dd>
+        <?php endforeach; ?>
+    <?php endif; ?>
 </dl>
+<p>
+    <?php
+    if ($result2["total_amount"] > 0) {
+        echo 'Total: ' . $result2["total_amount"];
+    }
+    ?>
+</p>
