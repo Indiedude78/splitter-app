@@ -1,6 +1,5 @@
 <?php require_once(__DIR__ . "/heading.php"); ?>
-<h3>Create a new party</h3>
-<form id="create_party" class="form" method="post" autocomplete="off">
+<form id="create_party" class="form" method="post" autocomplete="off" style="display: None;">
     <label for="party_name">Name</label>
     <input type="text" id="party_name" name="party_name" maxlength="60" required />
     <input type="submit" name="create" value="Create" id="p_submit" />
