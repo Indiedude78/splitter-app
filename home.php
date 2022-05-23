@@ -7,7 +7,8 @@ include_once(__DIR__ . "/partials/nav.php");
 echo '<p>Welcome ' . get_user_fullname() . '</p>';
 ?>
 
-<button id="create_party_button" name="create_party" value="Create" onclick="parent.location='partials/create_party.php'">Create a Party</button>
+<button id="create_party_button" name="create_party" value="Create">Create a Party</button>
+<?php include_once(__DIR__ . "/partials/create_party.php"); ?>
 <button id="join_party_button" name="join_party" value="Join">Join a Party</button>
 <?php include_once(__DIR__ . "/partials/join_party.php"); ?>
 <div>
