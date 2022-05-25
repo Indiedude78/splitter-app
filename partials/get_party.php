@@ -27,4 +27,4 @@ if ($e[0] == "00000") {
             <h5><?php echo $r["party_id"]; ?></h5>
         </div>
     </button>
-    <?php endforeach; ?>
+<?php endforeach; ?>

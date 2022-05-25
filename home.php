@@ -3,6 +3,10 @@ require_once(__DIR__ . "/partials/heading.php");
 if (!is_logged_in()) {
     die(header("Location:index.php"));
 }
+if (isset($_SESSION["party_num"]) || isset($_SESSION["party_id"])) {
+    unset($_SESSION["party_num"]);
+    unset($_SESSION["party_id"]);
+}
 include_once(__DIR__ . "/partials/nav.php");
 echo '<p>Welcome ' . get_user_fullname() . '</p>';
 ?>

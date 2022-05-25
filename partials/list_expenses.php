@@ -20,10 +20,4 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <?php endforeach; ?>
     <?php endif; ?>
 </dl>
-<p>
-    <?php
-    if ($result2["total_amount"] > 0) {
-        echo 'Total: ' . $result2["total_amount"];
-    }
-    ?>
-</p>
+<p id="total-amount"></p>
