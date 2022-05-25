@@ -56,6 +56,7 @@ if ($e[0] != "00000") {
 
 <?php include_once(__DIR__ . "/partials/add_expense.php"); ?>
 <?php include_once(__DIR__ . "/partials/list_expenses.php"); ?>
+<?php include_once(__DIR__ . "/partials/add_comment.php"); ?>
 <button onclick="window.location.href='home.php'" id="return_home_button">Return</button>
 <script src="jquery/jquery.js"></script>
 <script src="static/js/update_party_page.js"></script>
